@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harshita Gahlot - Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #6a5acd; /* soft purple */
+      --secondary-color: #4682b4; /* soft blue */
+      --accent-color: #9370db;
+      --bg-color: #ffffff;
+      --text-color: #333333;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+    }
+
+    /* Premium Navbar */
+    nav {
+      background: var(--bg-color);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+    }
+    nav a {
+      color: var(--primary-color);
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: var(--secondary-color);
+      transition: width 0.3s ease;
+    }
+    nav a:hover {
+      color: var(--secondary-color);
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Hero Section */
+    header {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      text-align: center;
+      padding: 5rem 2rem;
+      animation: fadeIn 1.5s ease-in;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin: 0;
+    }
+    header p {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+    }
+    .cta-buttons {
+      margin-top: 1.5rem;
+    }
+    .cta-buttons a {
+      background: var(--accent-color);
+      color: white;
+      padding: 12px 24px;
+      margin: 0 10px;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .cta-buttons a:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+    }
+
+    /* Sections */
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeUp 1s ease-in;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    /* Skills & Certifications */
+    .skills span, .certifications li {
+      display: inline-block;
+      background: #f0f0f0;
+      margin: 5px;
+      padding: 10px 15px;
+      border-radius: 20px;
+      transition: background 0.3s ease;
+    }
+    .skills span:hover {
+      background: var(--accent-color);
+      color: white;
+    }
+
+    /* Projects */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+    .project-card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2rem; }
+      .cta-buttons a { display: block; margin: 10px auto; }
+      nav { flex-wrap: wrap; }
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header>
+    <h1>Harshita Gahlot</h1>
+    <p>Computer Science Diploma Student</p>
+    <p>"Passionate Computer Science student interested in Web Development, Canva Design, and Digital Marketing. Currently seeking internship opportunities to gain practical experience and enhance my technical skills."</p>
+    <div class="cta-buttons">
+      <a href="#projects">View Projects</a>
+      <a href="#contact">Contact Me</a>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am pursuing a Diploma in Computer Science from Government Polytechnic Manesar. I have completed my first year with 80% marks and scored 91% in Class 10. I enjoy creating websites, designing social media graphics, and learning new technologies.</p>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
+    <h2>Education</h2>
+    <p><strong>Government Polytechnic Manesar</strong><br>Diploma in Computer Science<br>First Year Completed<br>Percentage: 80%</p>
+    <p><strong>Class 10</strong><br>Percentage: 91%</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>HTML</span>
+      <span>C Programming</span>
+      <span>C++</span>
+      <span>Website Development</span>
+      <span>Canva</span>
+      <span>MS Word</span>
+      <span>MS Excel</span>
+      <span>PowerPoint</span>
+      <span>Digital Marketing</span>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul class="certifications">
+      <li>Digital Marketing Certification (HubSpot Academy)</li>
+      <li>Basic Computer Skills Certification</li>
+    </ul>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <img src="project1.jpg" alt="Personal Portfolio Website">
+        <h3>Personal Portfolio Website</h3>
+        <p>A responsive portfolio showcasing my skills and projects.</p>
+      </div>
+      <div class="project-card">
+        <img src="project2.jpg" alt="Cafe Website Design">
+        <h3>Cafe Website Design</h3>
+        <p>Designed a modern cafe website with menu and booking features.</p>
+      </div>
+      <div class="project-card">
+        <img src="project3.jpg" alt="Social Media Post Designs">
+        <h3>Social Media Post Designs</h3>
+        <p>Creative Canva designs for engaging social media content.</p>
+      </div>
+      <div class="project-card">
+        <img src="project4.jpg" alt="Restaurant Menu Design">
+        <h3>Restaurant Menu
